@@ -10,6 +10,10 @@
 
 </head>
 
+<a-assets>
+  <a-asset-item id="food" src=".avocado.glb"></a-asset-item>
+</a-assets>
+
 <body>
   <a-scene mindar-image="imageTargetSrc: ./targets.mind; maxTrack: 2">
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>F
@@ -18,9 +22,9 @@
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 1">
-      <!-- 修改plane的颜色区分 -->
-      <a-plane color="red" opaciy="0.5" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>  
-    </a-entity>
+      <a-entity gltf-model="#food" rotation="0 180 0" scale="1 1 1" position="0 -0.5 0" animation-mixer="clip: Run"></a-entity>
+</a-entity>
+
 
 
 
